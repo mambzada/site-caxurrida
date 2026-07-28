@@ -129,7 +129,7 @@ export default function CausaAnimal() {
               lineHeight: 1.75,
             }}
           >
-            O projeto <strong style={{ color: '#fff' }}>"Amor Não Tem Raça"</strong>, da ONG Patas Needs, trabalha para mudar essa realidade — conectando animais que precisam de um lar com famílias dispostas a dar amor e cuidado responsável. A Caxurrida é o braço festivo desse movimento.
+            O projeto <strong style={{ color: '#fff' }}>"Amor Não Tem Raça"</strong>, da ONG Patas Needs, trabalha para mudar essa realidade — conectando animais que precisam de um lar com famílias dispostas a dar amor e cuidado responsável. A Cachurrida é o braço festivo desse movimento.
           </p>
         </div>
 

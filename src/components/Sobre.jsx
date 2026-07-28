@@ -70,7 +70,7 @@ export default function Sobre() {
               marginBottom: '1.5rem',
             }}
           >
-            A Caxurrida é um evento criado para reunir apaixonados por cães em um dia de integração, lazer e convivência entre pets e tutores. Nasce para celebrar o amor pelos animais, incentivar a guarda responsável e fortalecer a comunidade pet de Cachoeiro de Itapemirim.
+            A Cachurrida é um evento criado para reunir apaixonados por cães em um dia de integração, lazer e convivência entre pets e tutores. Nasce para celebrar o amor pelos animais, incentivar a guarda responsável e fortalecer a comunidade pet de Cachoeiro de Itapemirim.
           </p>
           <p
             style={{

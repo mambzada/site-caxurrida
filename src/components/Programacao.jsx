@@ -1,7 +1,7 @@
 const TIMELINE = [
   { time: '06h00', event: 'Credenciamento e recepção dos participantes', highlight: false },
   { time: '06h45', event: 'Aquecimento e orientações finais', highlight: false },
-  { time: '07h00', event: 'Largada oficial da Primeira Caxurrida', highlight: true },
+  { time: '07h00', event: 'Largada oficial da Primeira Cachurrida', highlight: true },
   { time: '08h00', event: 'Cerimônia oficial de abertura', highlight: false },
   { time: '08h30', event: 'Abertura da Feira de Adoção Responsável', highlight: false },
   { time: '08h30', event: 'Início da Campanha Solidária "Amor de Verdade"', highlight: false },

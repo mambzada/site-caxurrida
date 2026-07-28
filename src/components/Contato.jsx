@@ -59,7 +59,7 @@ export default function Contato() {
         >
           {/* WhatsApp */}
           <a
-            href={`https://wa.me/${phoneClean}?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Caxurrida%20de%20Cachoeiro.`}
+            href={`https://wa.me/${phoneClean}?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Cachurrida%20de%20Cachoeiro.`}
             target="_blank"
             rel="noopener noreferrer"
             style={{

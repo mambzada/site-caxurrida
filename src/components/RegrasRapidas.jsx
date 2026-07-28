@@ -69,7 +69,7 @@ export default function RegrasRapidas() {
                 margin: 0,
               }}
             >
-              A Caxurrida é um evento seguro, inclusivo e divertido. Leia as regras principais e, para mais detalhes, consulte o regulamento completo.
+              A Cachurrida é um evento seguro, inclusivo e divertido. Leia as regras principais e, para mais detalhes, consulte o regulamento completo.
             </p>
             <a
               href="#regulamento"

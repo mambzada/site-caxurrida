@@ -1,11 +1,11 @@
 import camisaImg from '../assets/camisa-caxurida.jpg.jpeg'
-import lencoImg from '../assets/lenco-caxurrida.jpg.jpeg'
+import lencoImg from '../assets/lenco-cachurrida.jpg.jpeg'
 
 const KIT_ITEMS = [
   {
     image: camisaImg,
     title: 'Camisa oficial',
-    desc: 'Camiseta exclusiva da 1ª Caxurrida, com a identidade visual do evento.',
+    desc: 'Camiseta exclusiva da 1ª Cachurrida, com a identidade visual do evento.',
   },
   {
     image: lencoImg,
@@ -97,7 +97,7 @@ export default function Kit() {
               lineHeight: 1.65,
             }}
           >
-            Todos os inscritos recebem um kit especial, pensado para que a experiência da Caxurrida comece antes mesmo do dia do evento.
+            Todos os inscritos recebem um kit especial, pensado para que a experiência da Cachurrida comece antes mesmo do dia do evento.
           </p>
         </div>
 

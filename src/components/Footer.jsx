@@ -58,7 +58,7 @@ export default function Footer() {
                   lineHeight: 1,
                 }}
               >
-                Caxurrida
+                Cachurrida
               </span>
             </a>
             <p
@@ -71,7 +71,7 @@ export default function Footer() {
                 maxWidth: '260px',
               }}
             >
-              1ª Caxurrida de Cachoeiro de Itapemirim — corrida solidária de 400m para tutores e seus pets.
+              1ª Cachurrida de Cachoeiro de Itapemirim — corrida solidária de 400m para tutores e seus pets.
             </p>
             <div
               style={{
@@ -203,7 +203,7 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            © 2026 ONG Patas Needs · 1ª Caxurrida de Cachoeiro de Itapemirim. Todos os direitos reservados.
+            © 2026 ONG Patas Needs · 1ª Cachurrida de Cachoeiro de Itapemirim. Todos os direitos reservados.
           </p>
           <p
             style={{

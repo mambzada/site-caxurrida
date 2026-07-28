@@ -79,7 +79,7 @@ export default function Atracoes() {
               lineHeight: 1.65,
             }}
           >
-            A Caxurrida é uma festa completa. Venha com seu pet e aproveite um dia repleto de atrações para toda a família.
+            A Cachurrida é uma festa completa. Venha com seu pet e aproveite um dia repleto de atrações para toda a família.
           </p>
         </div>
 

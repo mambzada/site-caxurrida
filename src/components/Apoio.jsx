@@ -125,7 +125,7 @@ export default function Apoio() {
               lineHeight: 1.6,
             }}
           >
-            Quer apoiar a Caxurrida e contribuir com a causa animal? Entre em contato conosco.
+            Quer apoiar a Cachurrida e contribuir com a causa animal? Entre em contato conosco.
           </p>
           <a
             href="#contato"

@@ -72,7 +72,7 @@ export default function Navbar() {
               lineHeight: 1,
             }}
           >
-            Caxurrida
+            Cachurrida
           </span>
         </a>
 
