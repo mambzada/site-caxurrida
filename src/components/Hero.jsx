@@ -126,7 +126,7 @@ export default function Hero() {
                 letterSpacing: '-0.02em',
               }}
             >
-              Cax
+              Cach
               <span style={{ color: '#E0592A' }}>urri</span>
               da
             </span>
