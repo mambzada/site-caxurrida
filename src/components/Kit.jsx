@@ -1,5 +1,6 @@
 import camisaImg from '../assets/camisa-caxurida.jpg.jpeg'
 import lencoImg from '../assets/lenco-cachurrida.jpg.jpeg'
+import medalhaImg from '../assets/medalha-cachurrida.jpg.png'
 
 const KIT_ITEMS = [
   {
@@ -13,8 +14,7 @@ const KIT_ITEMS = [
     desc: 'Seu cão também vai com estilo: lenço temático exclusivo para participantes peludos.',
   },
   {
-    image: null,
-    icon: <MedalIcon />,
+    image: medalhaImg,
     title: 'Medalha de conclusão',
     desc: 'Para guardar a memória: medalha oficial para cada dupla que cruzar a linha de chegada.',
   },
@@ -229,16 +229,6 @@ export default function Kit() {
         </p>
       </div>
     </section>
-  )
-}
-
-function MedalIcon() {
-  return (
-    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="15" r="7" />
-      <path d="M8.56 2.9A7 7 0 0 1 12 2a7 7 0 0 1 3.44.9L17 8H7l1.56-5.1z" />
-      <path d="M12 12v3l2 1" />
-    </svg>
   )
 }
 
