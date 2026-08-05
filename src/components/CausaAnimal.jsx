@@ -13,25 +13,14 @@ export default function CausaAnimal() {
     <section
       id="causa"
       style={{
-        background: '#2E4E9C',
+        background: '#15130D',
         paddingTop: '6rem',
         paddingBottom: '6rem',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Decorative paw bg */}
-      <div
-        className="paw-bg"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='0.04'%3E%3Cellipse cx='26' cy='16' rx='6' ry='9'/%3E%3Cellipse cx='48' cy='13' rx='5' ry='8'/%3E%3Cellipse cx='13' cy='32' rx='5' ry='8'/%3E%3Cellipse cx='60' cy='29' rx='5' ry='8'/%3E%3Cellipse cx='37' cy='46' rx='14' ry='18'/%3E%3C/g%3E%3C/svg%3E")`,
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* Large decorative text */}
+      {/* Large decorative watermark */}
       <div
         style={{
           position: 'absolute',
@@ -107,7 +96,7 @@ export default function CausaAnimal() {
             }}
           >
             A causa animal <br />
-            <span style={{ color: '#8CB63C' }}>e o impacto social</span>
+            <span style={{ color: '#FFC72C' }}>e o impacto social</span>
           </h2>
 
           <p
@@ -142,7 +131,7 @@ export default function CausaAnimal() {
               fontSize: '0.7rem',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#8CB63C',
+              color: '#FFC72C',
               marginBottom: '1.5rem',
             }}
           >
@@ -164,7 +153,7 @@ export default function CausaAnimal() {
                   cursor: 'default',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(140,182,60,0.12)'
+                  e.currentTarget.style.background = 'rgba(255,199,44,0.12)'
                   e.currentTarget.style.transform = 'translateX(4px)'
                 }}
                 onMouseLeave={(e) => {
@@ -177,7 +166,7 @@ export default function CausaAnimal() {
                     width: '8px',
                     height: '8px',
                     borderRadius: '50%',
-                    background: '#8CB63C',
+                    background: '#FFC72C',
                     flexShrink: 0,
                   }}
                 />

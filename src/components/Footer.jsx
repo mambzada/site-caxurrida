@@ -17,19 +17,19 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: '#141414',
-        paddingTop: '4rem',
+        background: '#15130D',
         paddingBottom: '2rem',
-        borderTop: '3px solid #E0592A',
       }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
+      <div className="hazard-tape" style={{ height: '4px' }} />
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '4rem 1.5rem 0' }}>
         {/* Top row */}
         <div
           style={{
             display: 'grid',
             gap: '3rem',
             paddingBottom: '3rem',
+            paddingTop: '0',
             borderBottom: '1px solid rgba(255,255,255,0.08)',
           }}
           className="md:grid-cols-3"
@@ -46,14 +46,14 @@ export default function Footer() {
                 marginBottom: '1rem',
               }}
             >
-              <PawIcon size={22} color="#E0592A" />
+              <PawIcon size={22} color="#FFC72C" />
               <span
                 style={{
                   fontFamily: 'var(--font-heading)',
                   fontWeight: 900,
                   fontSize: '1.3rem',
                   color: '#fff',
-                  letterSpacing: '0.06em',
+                  letterSpacing: '0.04em',
                   textTransform: 'uppercase',
                   lineHeight: 1,
                 }}
@@ -78,8 +78,8 @@ export default function Footer() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                background: 'rgba(224,89,42,0.12)',
-                border: '1px solid rgba(224,89,42,0.25)',
+                background: 'rgba(255,199,44,0.12)',
+                border: '1px solid rgba(255,199,44,0.3)',
                 borderRadius: '4px',
                 padding: '0.35rem 0.85rem',
               }}
@@ -91,7 +91,7 @@ export default function Footer() {
                   fontSize: '0.72rem',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  color: '#E0592A',
+                  color: '#FFC72C',
                 }}
               >
                 16 Ago 2026 · Cachoeiro/ES
@@ -126,7 +126,7 @@ export default function Footer() {
                       textDecoration: 'none',
                       transition: 'color 0.15s',
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#E0592A')}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#FFC72C')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
                   >
                     {link.label}
@@ -163,7 +163,7 @@ export default function Footer() {
                       textDecoration: 'none',
                       transition: 'color 0.15s',
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#E0592A')}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#FFC72C')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
                   >
                     {link.label}
@@ -177,7 +177,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
-              style={{ padding: '0.65rem 1.4rem', fontSize: '0.85rem', boxShadow: '0 3px 0 #C04A1E' }}
+              style={{ padding: '0.65rem 1.4rem', fontSize: '0.85rem', boxShadow: '0 3px 0 #E8AE00' }}
             >
               Inscreva-se
             </a>

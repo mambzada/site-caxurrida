@@ -10,11 +10,6 @@ const ATRACOES = [
     desc: 'Os pets mais elegantes desfilam num palco à parte. Elegância e fofura em destaque.',
   },
   {
-    icon: <PencilIcon />,
-    title: 'Concurso Municipal de Redação',
-    desc: 'Criatividade e consciência ambiental: jovens escrevem sobre amor e guarda responsável.',
-  },
-  {
     icon: <PawShopIcon />,
     title: 'Espaço Pet e Expositores',
     desc: 'Produtos, serviços e novidades do mundo pet reunidos em um só lugar.',
@@ -54,7 +49,7 @@ export default function Atracoes() {
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }} className="reveal">
-          <span className="section-label">O que você vai encontrar</span>
+          <span className="section-label" style={{ justifyContent: 'center' }}>O que você vai encontrar</span>
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
@@ -62,7 +57,7 @@ export default function Atracoes() {
               fontSize: 'clamp(2.4rem, 5vw, 3.5rem)',
               lineHeight: 0.95,
               textTransform: 'uppercase',
-              color: '#1A1A1A',
+              color: '#15130D',
               margin: '0 0 1rem',
               letterSpacing: '-0.01em',
             }}
@@ -73,7 +68,7 @@ export default function Atracoes() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '1rem',
-              color: '#6b6b6b',
+              color: '#6B6862',
               maxWidth: '520px',
               margin: '0 auto',
               lineHeight: 1.65,
@@ -99,8 +94,8 @@ export default function Atracoes() {
             >
               <div
                 style={{
-                  background: '#FAF6EE',
-                  border: '1px solid #ebe0ce',
+                  background: '#F7F5EC',
+                  border: '1px solid rgba(21,19,13,0.1)',
                   borderRadius: '10px',
                   padding: '1.6rem',
                   height: '100%',
@@ -114,12 +109,12 @@ export default function Atracoes() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)'
                   e.currentTarget.style.boxShadow = '0 12px 32px rgba(0,0,0,0.1)'
-                  e.currentTarget.style.borderColor = '#E0592A'
+                  e.currentTarget.style.borderColor = '#15130D'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
                   e.currentTarget.style.boxShadow = 'none'
-                  e.currentTarget.style.borderColor = '#ebe0ce'
+                  e.currentTarget.style.borderColor = 'rgba(21,19,13,0.1)'
                 }}
               >
                 <div
@@ -127,12 +122,11 @@ export default function Atracoes() {
                     width: '48px',
                     height: '48px',
                     borderRadius: '10px',
-                    background: '#fff',
-                    border: '1px solid #ebe0ce',
+                    background: 'rgba(255,199,44,0.2)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#E0592A',
+                    color: '#15130D',
                     flexShrink: 0,
                   }}
                 >
@@ -143,7 +137,7 @@ export default function Atracoes() {
                     fontFamily: 'var(--font-heading)',
                     fontWeight: 800,
                     fontSize: '1.1rem',
-                    color: '#1A1A1A',
+                    color: '#15130D',
                     margin: 0,
                     lineHeight: 1.2,
                   }}
@@ -154,7 +148,7 @@ export default function Atracoes() {
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.88rem',
-                    color: '#5a5a5a',
+                    color: '#5a5750',
                     lineHeight: 1.6,
                     margin: 0,
                   }}
@@ -184,15 +178,6 @@ function CatWalkIcon() {
       <circle cx="12" cy="5" r="3" />
       <path d="M6.5 8a2 2 0 0 0-2 2l-.5 8h16l-.5-8a2 2 0 0 0-2-2z" />
       <path d="M6 18l-1 3M18 18l1 3" />
-    </svg>
-  )
-}
-
-function PencilIcon() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 20h9" />
-      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
     </svg>
   )
 }

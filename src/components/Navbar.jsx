@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
-import PawIcon from './icons/PawIcon'
+import logoNav64 from '../assets/logo/logo-nav-64.webp'
+import logoNav96 from '../assets/logo/logo-nav-96.webp'
+import logoNav128 from '../assets/logo/logo-nav-128.webp'
 
 const NAV_LINKS = [
   { label: 'Sobre', href: '#sobre' },
@@ -32,15 +34,15 @@ export default function Navbar() {
         zIndex: 100,
         transition: 'background 0.35s ease, box-shadow 0.35s ease',
         background: scrolled
-          ? 'rgba(20, 20, 20, 0.97)'
-          : 'rgba(20, 20, 20, 0.55)',
+          ? 'rgba(21, 19, 13, 0.97)'
+          : 'rgba(21, 19, 13, 0.55)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
         boxShadow: scrolled ? '0 1px 24px rgba(0,0,0,0.45)' : 'none',
       }}
     >
-      {/* Top accent bar */}
-      <div style={{ height: '3px', background: 'linear-gradient(90deg, #E0592A 0%, #8CB63C 50%, #E0592A 100%)' }} />
+      {/* Hazard-tape accent bar */}
+      <div className="hazard-tape" style={{ height: '4px' }} />
 
       <nav
         style={{
@@ -60,14 +62,21 @@ export default function Navbar() {
           style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', textDecoration: 'none', flexShrink: 0 }}
           onClick={closeMenu}
         >
-          <PawIcon size={20} color="#E0592A" />
+          <img
+            src={logoNav64}
+            srcSet={`${logoNav64} 64w, ${logoNav96} 96w, ${logoNav128} 128w`}
+            sizes="(min-width: 640px) 40px, 32px"
+            alt="Cachurrida"
+            className="h-8 w-8 sm:h-10 sm:w-10 shrink-0"
+          />
           <span
+            className="hidden sm:inline"
             style={{
               fontFamily: 'var(--font-heading)',
               fontWeight: 900,
               fontSize: '1.25rem',
               color: '#fff',
-              letterSpacing: '0.06em',
+              letterSpacing: '0.04em',
               textTransform: 'uppercase',
               lineHeight: 1,
             }}
@@ -106,8 +115,8 @@ export default function Navbar() {
                   transition: 'color 0.15s, background 0.15s',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#E0592A'
-                  e.currentTarget.style.background = 'rgba(224,89,42,0.1)'
+                  e.currentTarget.style.color = '#FFC72C'
+                  e.currentTarget.style.background = 'rgba(255,199,44,0.1)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.color = 'rgba(255,255,255,0.75)'
@@ -126,7 +135,7 @@ export default function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary show-md-inline"
-          style={{ padding: '0.5rem 1.25rem', fontSize: '0.82rem', flexShrink: 0, boxShadow: '0 3px 0 #C04A1E' }}
+          style={{ padding: '0.5rem 1.25rem', fontSize: '0.82rem', flexShrink: 0, boxShadow: '0 3px 0 #E8AE00' }}
         >
           Inscreva-se
         </a>
@@ -189,7 +198,7 @@ export default function Navbar() {
           maxHeight: menuOpen ? '500px' : '0',
           overflow: 'hidden',
           transition: 'max-height 0.3s ease',
-          background: 'rgba(20,20,20,0.98)',
+          background: 'rgba(21,19,13,0.98)',
           borderTop: menuOpen ? '1px solid rgba(255,255,255,0.08)' : 'none',
         }}
       >
@@ -210,7 +219,7 @@ export default function Navbar() {
                 borderBottom: i < NAV_LINKS.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
                 transition: 'color 0.15s',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#E0592A')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#FFC72C')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
             >
               {link.label}

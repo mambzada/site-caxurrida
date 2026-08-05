@@ -6,7 +6,6 @@ const TIMELINE = [
   { time: '08h30', event: 'Abertura da Feira de Adoção Responsável', highlight: false },
   { time: '08h30', event: 'Início da Campanha Solidária "Amor de Verdade"', highlight: false },
   { time: '09h30', event: 'Passarela Modelo Caramelo', highlight: false },
-  { time: '10h00', event: 'Concurso Municipal de Redação', highlight: false },
   { time: '10h30', event: 'Sorteios e premiações', highlight: false },
   { time: '11h00', event: 'Show com artista municipal', highlight: true },
   { time: '12h00', event: 'Homenagens e agradecimentos', highlight: false },
@@ -18,7 +17,7 @@ export default function Programacao() {
     <section
       id="programacao"
       style={{
-        background: '#FAF6EE',
+        background: '#F7F5EC',
         paddingTop: '6rem',
         paddingBottom: '6rem',
       }}
@@ -26,7 +25,7 @@ export default function Programacao() {
       <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
-          <span className="section-label">Domingo, 16 de agosto</span>
+          <span className="section-label" style={{ justifyContent: 'center' }}>Domingo, 16 de agosto</span>
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
@@ -34,7 +33,7 @@ export default function Programacao() {
               fontSize: 'clamp(2.4rem, 5vw, 3.5rem)',
               lineHeight: 0.95,
               textTransform: 'uppercase',
-              color: '#1A1A1A',
+              color: '#15130D',
               margin: '0 0 1rem',
               letterSpacing: '-0.01em',
             }}
@@ -45,7 +44,7 @@ export default function Programacao() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '1rem',
-              color: '#6b6b6b',
+              color: '#6B6862',
               maxWidth: '480px',
               margin: '0 auto',
               lineHeight: 1.65,
@@ -66,7 +65,7 @@ export default function Programacao() {
               top: '12px',
               bottom: '12px',
               width: '2px',
-              background: 'linear-gradient(to bottom, transparent, #e8d8c8 4%, #e8d8c8 96%, transparent)',
+              background: 'linear-gradient(to bottom, transparent, rgba(21,19,13,0.14) 4%, rgba(21,19,13,0.14) 96%, transparent)',
               transform: 'translateX(-50%)',
             }}
           />
@@ -80,7 +79,7 @@ export default function Programacao() {
               top: '12px',
               bottom: '12px',
               width: '2px',
-              background: 'linear-gradient(to bottom, transparent, #e8d8c8 4%, #e8d8c8 96%, transparent)',
+              background: 'linear-gradient(to bottom, transparent, rgba(21,19,13,0.14) 4%, rgba(21,19,13,0.14) 96%, transparent)',
             }}
           />
 
@@ -118,9 +117,8 @@ export default function Programacao() {
                           width: item.highlight ? '18px' : '12px',
                           height: item.highlight ? '18px' : '12px',
                           borderRadius: '50%',
-                          background: item.highlight ? '#E0592A' : '#FAF6EE',
-                          border: `2px solid ${item.highlight ? '#E0592A' : '#c8b89a'}`,
-                          boxShadow: item.highlight ? '0 0 0 4px rgba(224,89,42,0.2)' : 'none',
+                          background: item.highlight ? '#FFC72C' : '#F7F5EC',
+                          border: `2.5px solid ${item.highlight ? '#15130D' : 'rgba(21,19,13,0.3)'}`,
                           transition: 'transform 0.2s',
                           flexShrink: 0,
                         }}
@@ -159,11 +157,10 @@ export default function Programacao() {
                     >
                       <span
                         style={{
-                          fontFamily: 'var(--font-heading)',
-                          fontWeight: 800,
-                          fontSize: '1rem',
-                          color: item.highlight ? '#E0592A' : '#9a8a7a',
-                          letterSpacing: '0.04em',
+                          fontFamily: 'var(--font-mono)',
+                          fontWeight: 700,
+                          fontSize: '0.92rem',
+                          color: item.highlight ? '#15130D' : '#8a877f',
                         }}
                       >
                         {item.time}
@@ -177,9 +174,8 @@ export default function Programacao() {
                           width: item.highlight ? '14px' : '10px',
                           height: item.highlight ? '14px' : '10px',
                           borderRadius: '50%',
-                          background: item.highlight ? '#E0592A' : '#FAF6EE',
-                          border: `2px solid ${item.highlight ? '#E0592A' : '#c8b89a'}`,
-                          boxShadow: item.highlight ? '0 0 0 3px rgba(224,89,42,0.2)' : 'none',
+                          background: item.highlight ? '#FFC72C' : '#F7F5EC',
+                          border: `2.5px solid ${item.highlight ? '#15130D' : 'rgba(21,19,13,0.3)'}`,
                           flexShrink: 0,
                           position: 'relative',
                           zIndex: 1,
@@ -194,29 +190,14 @@ export default function Programacao() {
                           fontFamily: 'var(--font-body)',
                           fontSize: item.highlight ? '1rem' : '0.95rem',
                           fontWeight: item.highlight ? 700 : 500,
-                          color: item.highlight ? '#E0592A' : '#2D2D2D',
+                          color: '#2D2D2D',
                           lineHeight: 1.4,
                           margin: 0,
                         }}
                       >
                         {item.event}
                         {item.highlight && (
-                          <span
-                            style={{
-                              display: 'inline-flex',
-                              marginLeft: '0.5rem',
-                              background: '#E0592A',
-                              color: '#fff',
-                              fontSize: '0.62rem',
-                              fontFamily: 'var(--font-heading)',
-                              fontWeight: 700,
-                              letterSpacing: '0.1em',
-                              textTransform: 'uppercase',
-                              padding: '0.15rem 0.45rem',
-                              borderRadius: '3px',
-                              verticalAlign: 'middle',
-                            }}
-                          >
+                          <span className="hl" style={{ display: 'inline-flex', marginLeft: '0.5rem', fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '0.62rem', letterSpacing: '0.1em', textTransform: 'uppercase', verticalAlign: 'middle' }}>
                             Destaque
                           </span>
                         )}
@@ -239,11 +220,10 @@ function TimelineCard({ item, align }) {
       <span
         style={{
           display: 'block',
-          fontFamily: 'var(--font-heading)',
-          fontWeight: 800,
-          fontSize: '1rem',
-          color: item.highlight ? '#E0592A' : '#9a8a7a',
-          letterSpacing: '0.04em',
+          fontFamily: 'var(--font-mono)',
+          fontWeight: 700,
+          fontSize: '0.92rem',
+          color: item.highlight ? '#15130D' : '#8a877f',
           marginBottom: '0.2rem',
           textAlign: align,
         }}
@@ -255,7 +235,7 @@ function TimelineCard({ item, align }) {
           fontFamily: 'var(--font-body)',
           fontSize: item.highlight ? '0.98rem' : '0.92rem',
           fontWeight: item.highlight ? 700 : 500,
-          color: item.highlight ? '#E0592A' : '#2D2D2D',
+          color: '#2D2D2D',
           lineHeight: 1.4,
           margin: 0,
           textAlign: align,
@@ -264,19 +244,16 @@ function TimelineCard({ item, align }) {
         {item.event}
         {item.highlight && (
           <span
+            className="hl"
             style={{
               display: 'inline-flex',
               marginLeft: align === 'right' ? '0' : '0.5rem',
               marginRight: align === 'right' ? '0.5rem' : '0',
-              background: '#E0592A',
-              color: '#fff',
-              fontSize: '0.6rem',
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
+              fontSize: '0.6rem',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              padding: '0.15rem 0.45rem',
-              borderRadius: '3px',
               verticalAlign: 'middle',
             }}
           >

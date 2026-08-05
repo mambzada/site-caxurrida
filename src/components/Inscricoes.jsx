@@ -3,7 +3,7 @@ export default function Inscricoes() {
     <section
       id="inscricoes"
       style={{
-        background: '#1A1A1A',
+        background: '#15130D',
         paddingTop: '6rem',
         paddingBottom: '6rem',
         position: 'relative',
@@ -18,24 +18,13 @@ export default function Inscricoes() {
       <div
         style={{
           position: 'absolute',
-          top: '-80px',
-          right: '-80px',
-          width: '400px',
-          height: '400px',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '600px',
+          height: '600px',
           borderRadius: '50%',
-          background: 'rgba(224,89,42,0.06)',
-          pointerEvents: 'none',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '-60px',
-          left: '-60px',
-          width: '300px',
-          height: '300px',
-          borderRadius: '50%',
-          background: 'rgba(140,182,60,0.05)',
+          background: 'radial-gradient(circle, rgba(255,199,44,0.08) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -57,8 +46,8 @@ export default function Inscricoes() {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            background: 'rgba(224,89,42,0.15)',
-            border: '1px solid rgba(224,89,42,0.35)',
+            background: 'rgba(255,199,44,0.14)',
+            border: '1px solid rgba(255,199,44,0.4)',
             borderRadius: '3px',
             padding: '0.3rem 0.85rem',
             marginBottom: '1.5rem',
@@ -70,7 +59,7 @@ export default function Inscricoes() {
               width: '6px',
               height: '6px',
               borderRadius: '50%',
-              background: '#E0592A',
+              background: '#FFC72C',
               animation: 'pulse 1.8s ease-in-out infinite',
             }}
           />
@@ -81,7 +70,7 @@ export default function Inscricoes() {
               fontSize: '0.68rem',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#E0592A',
+              color: '#FFC72C',
             }}
           >
             Inscrições abertas
@@ -101,7 +90,7 @@ export default function Inscricoes() {
           }}
         >
           Garanta sua vaga <br />
-          <span style={{ color: '#E0592A' }}>e a do seu pet</span>
+          <span style={{ color: '#FFC72C' }}>e a do seu pet</span>
         </h2>
 
         <p
@@ -141,7 +130,7 @@ export default function Inscricoes() {
           >
             Prazo:{' '}
             <strong style={{ color: '#fff', fontWeight: 600 }}>
-              10 de agosto de 2026, às 23h59
+              13 de agosto de 2026, às 23h59
             </strong>
             {' '}ou até o fim das vagas
           </span>

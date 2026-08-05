@@ -1,21 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-orange: #E0592A;
-  --color-orange-light: #F07048;
-  --color-orange-dark: #C04A1E;
-  --color-green: #8CB63C;
-  --color-green-dark: #6E9A28;
-  --color-cream: #FAF6EE;
-  --color-cream-dark: #F0E8D8;
-  --color-blue: #2E4E9C;
-  --color-blue-dark: #1E3A7A;
-  --color-blue-light: #3D5FB0;
-  --color-dark: #1A1A1A;
-  --color-dark-muted: #2D2D2D;
+  --color-yellow: #FFC72C;
+  --color-yellow-deep: #E8AE00;
+  --color-black: #15130D;
+  --color-black-elevated: #221F17;
+  --color-white: #FFFFFF;
+  --color-paper: #F7F5EC;
+  --color-ink-muted: #6B6862;
 
-  --font-heading: 'Barlow Condensed', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Big Shoulders Display', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
 html {
@@ -25,8 +21,8 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-cream);
-  color: var(--color-dark);
+  background-color: var(--color-paper);
+  color: var(--color-black);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -38,20 +34,30 @@ body {
   font-family: var(--font-heading);
 }
 
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Subtle diagonal texture — used sparingly on black sections, never on light ones */
 .stripe-bg {
   background-image: repeating-linear-gradient(
     -55deg,
     transparent,
     transparent 14px,
-    rgba(255, 255, 255, 0.07) 14px,
-    rgba(255, 255, 255, 0.07) 28px
+    rgba(255, 255, 255, 0.045) 14px,
+    rgba(255, 255, 255, 0.045) 28px
   );
 }
 
-.paw-bg {
-  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23E0592A' fill-opacity='0.07'%3E%3Cellipse cx='26' cy='16' rx='6' ry='9'/%3E%3Cellipse cx='48' cy='13' rx='5' ry='8'/%3E%3Cellipse cx='13' cy='32' rx='5' ry='8'/%3E%3Cellipse cx='60' cy='29' rx='5' ry='8'/%3E%3Cellipse cx='37' cy='46' rx='14' ry='18'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 90px 90px;
+/* Hazard-tape strip — the site's structural signature, references start-corral barricade tape */
+.hazard-tape {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--color-yellow),
+    var(--color-yellow) 18px,
+    var(--color-black) 18px,
+    var(--color-black) 36px
+  );
 }
 
 @keyframes fadeInUp {
@@ -77,20 +83,36 @@ body {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+/* Paw stamp — the signature mark. Fires once on load, like a rubber stamp hitting paper. */
+@keyframes pawStampIn {
+  0%   { opacity: 0; transform: scale(1.5) rotate(var(--stamp-rot, -10deg)); }
+  55%  { opacity: 1; transform: scale(0.9) rotate(var(--stamp-rot, -10deg)); }
+  100% { opacity: 1; transform: scale(1) rotate(var(--stamp-rot, -10deg)); }
+}
+.paw-stamp {
+  transform: rotate(var(--stamp-rot, -10deg));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .paw-stamp {
+    animation: pawStampIn 0.55s cubic-bezier(0.22, 0.9, 0.32, 1.1) both;
+    animation-delay: var(--stamp-delay, 0.5s);
+  }
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--color-orange);
-  color: #fff;
+  background-color: var(--color-yellow);
+  color: var(--color-black);
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.1rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.9rem 2.25rem;
   border-radius: 4px;
-  box-shadow: 0 4px 0 var(--color-orange-dark), 0 6px 16px rgba(224,89,42,0.3);
+  box-shadow: 0 4px 0 var(--color-yellow-deep), 0 6px 16px rgba(0,0,0,0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
   text-decoration: none;
   cursor: pointer;
@@ -98,13 +120,13 @@ body {
   white-space: nowrap;
 }
 .btn-primary:hover {
-  background-color: var(--color-orange-light);
+  background-color: #FFD75C;
   transform: translateY(-2px);
-  box-shadow: 0 6px 0 var(--color-orange-dark), 0 10px 24px rgba(224,89,42,0.4);
+  box-shadow: 0 6px 0 var(--color-yellow-deep), 0 10px 24px rgba(0,0,0,0.4);
 }
 .btn-primary:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 0 var(--color-orange-dark), 0 3px 8px rgba(224,89,42,0.2);
+  box-shadow: 0 2px 0 var(--color-yellow-deep), 0 3px 8px rgba(0,0,0,0.25);
 }
 
 .btn-outline-white {
@@ -116,33 +138,72 @@ body {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.1rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.85rem 2.25rem;
   border-radius: 4px;
-  border: 2px solid rgba(255,255,255,0.55);
+  border: 2px solid rgba(255,255,255,0.5);
   transition: all 0.15s ease;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
 }
 .btn-outline-white:hover {
-  background-color: rgba(255,255,255,0.14);
+  background-color: rgba(255,255,255,0.12);
   border-color: #fff;
 }
 
+/* Eyebrow label — on light/paper backgrounds, always black text (yellow fails contrast here) */
 .section-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.72rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-orange);
+  color: var(--color-black);
   margin-bottom: 0.75rem;
 }
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--color-yellow);
+  flex-shrink: 0;
+}
+/* Used on black/dark section backgrounds instead — yellow reads fine there */
 .section-label-white {
-  color: rgba(255,255,255,0.7);
+  color: var(--color-yellow);
+}
+.section-label-white::before {
+  background: var(--color-white);
+}
+
+/* Highlighter chip — the emphasis device for light backgrounds: black text stays legible,
+   yellow does the accenting instead of the text color itself. */
+.hl {
+  background: var(--color-yellow);
+  color: var(--color-black);
+  padding: 0.03em 0.32em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Standard link style for light backgrounds: black text, yellow underline */
+.link-underline {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-yellow);
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease;
+}
+.link-underline:hover {
+  opacity: 0.7;
 }
 
 /* Responsive display helpers — avoids inline-style vs Tailwind conflicts */

@@ -4,7 +4,7 @@ const INFO_CARDS = [
   {
     icon: <LocationIcon />,
     label: 'Local',
-    value: 'Praça de Fátima',
+    value: 'Linha Vermelha',
     sub: 'Cachoeiro de Itapemirim/ES',
   },
   {
@@ -14,7 +14,7 @@ const INFO_CARDS = [
     sub: 'Domingo · Largada às 7h',
   },
   {
-    icon: <PawIcon size={22} color="#E0592A" />,
+    icon: <PawIcon size={22} color="#15130D" />,
     label: 'Realização',
     value: 'ONG Patas Needs',
     sub: 'Proteção e adoção animal',
@@ -31,7 +31,7 @@ export default function Sobre() {
   return (
     <section
       id="sobre"
-      style={{ background: '#fff', paddingTop: '6rem', paddingBottom: '6rem' }}
+      style={{ background: '#F7F5EC', paddingTop: '6rem', paddingBottom: '6rem' }}
     >
       <div
         style={{
@@ -54,18 +54,18 @@ export default function Sobre() {
               fontSize: 'clamp(2.4rem, 5vw, 3.5rem)',
               lineHeight: 0.95,
               textTransform: 'uppercase',
-              color: '#1A1A1A',
+              color: '#15130D',
               margin: '0 0 1.5rem',
               letterSpacing: '-0.01em',
             }}
           >
-            Onde tutores e pets <span style={{ color: '#E0592A' }}>correm juntos</span>
+            Onde tutores e pets <span className="hl">correm juntos</span>
           </h2>
           <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '1.05rem',
-              color: '#4a4a4a',
+              color: '#3a3833',
               lineHeight: 1.75,
               marginBottom: '1.5rem',
             }}
@@ -76,18 +76,18 @@ export default function Sobre() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '1.05rem',
-              color: '#4a4a4a',
+              color: '#3a3833',
               lineHeight: 1.75,
               marginBottom: '2.5rem',
             }}
           >
-            Com um percurso recreativo de 400 metros — acessível e sem competição — o evento convida tutores e seus cães a participarem juntos de uma manhã inesquecível na Praça de Fátima.
+            Com um percurso recreativo de 400 metros — acessível e sem competição — o evento convida tutores e seus cães a participarem juntos de uma manhã inesquecível na Linha Vermelha.
           </p>
 
           {/* Pull quote */}
           <blockquote
             style={{
-              borderLeft: '4px solid #E0592A',
+              borderLeft: '4px solid #FFC72C',
               paddingLeft: '1.5rem',
               margin: 0,
             }}
@@ -97,14 +97,13 @@ export default function Sobre() {
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 800,
                 fontSize: 'clamp(1.3rem, 3vw, 1.75rem)',
-                color: '#1A1A1A',
+                color: '#15130D',
                 lineHeight: 1.2,
                 textTransform: 'uppercase',
                 letterSpacing: '0.01em',
               }}
             >
-              "Porque amor não tem raça.{' '}
-              <span style={{ color: '#E0592A' }}>Amor se compartilha."</span>
+              "Porque amor não tem raça. Amor se compartilha."
             </p>
           </blockquote>
         </div>
@@ -122,8 +121,8 @@ export default function Sobre() {
             <div
               key={i}
               style={{
-                background: i % 2 === 0 ? '#FAF6EE' : '#fff',
-                border: '1px solid #e8e0d0',
+                background: '#fff',
+                border: '1px solid rgba(21,19,13,0.1)',
                 borderRadius: '8px',
                 padding: '1.4rem',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
@@ -142,12 +141,12 @@ export default function Sobre() {
                   width: '40px',
                   height: '40px',
                   borderRadius: '8px',
-                  background: 'rgba(224,89,42,0.1)',
+                  background: 'rgba(255,199,44,0.18)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginBottom: '1rem',
-                  color: '#E0592A',
+                  color: '#15130D',
                 }}
               >
                 {card.icon}
@@ -159,7 +158,7 @@ export default function Sobre() {
                   fontSize: '0.68rem',
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
-                  color: '#9a9a9a',
+                  color: '#6B6862',
                   marginBottom: '0.3rem',
                 }}
               >
@@ -170,7 +169,7 @@ export default function Sobre() {
                   fontFamily: 'var(--font-heading)',
                   fontWeight: 800,
                   fontSize: '1.1rem',
-                  color: '#1A1A1A',
+                  color: '#15130D',
                   lineHeight: 1.2,
                   marginBottom: '0.25rem',
                 }}
@@ -181,7 +180,7 @@ export default function Sobre() {
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontSize: '0.82rem',
-                  color: '#6b6b6b',
+                  color: '#6B6862',
                   lineHeight: 1.4,
                 }}
               >

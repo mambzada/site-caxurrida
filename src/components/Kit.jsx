@@ -31,14 +31,14 @@ export default function Kit() {
     <section
       id="kit"
       style={{
-        background: '#E0592A',
+        background: '#15130D',
         paddingTop: '6rem',
         paddingBottom: '6rem',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Stripe texture */}
+      {/* Subtle diagonal texture */}
       <div className="stripe-bg" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
 
       {/* Decorative large text */}
@@ -51,7 +51,7 @@ export default function Kit() {
           fontWeight: 900,
           fontSize: 'clamp(8rem, 22vw, 18rem)',
           lineHeight: 1,
-          color: 'rgba(0,0,0,0.06)',
+          color: 'rgba(255,255,255,0.03)',
           textTransform: 'uppercase',
           pointerEvents: 'none',
           userSelect: 'none',
@@ -86,13 +86,13 @@ export default function Kit() {
             }}
           >
             Você e seu pet <br />
-            <span style={{ color: 'rgba(255,255,255,0.55)' }}>chegam preparados</span>
+            <span style={{ color: 'rgba(255,255,255,0.5)' }}>chegam preparados</span>
           </h2>
           <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '1rem',
-              color: 'rgba(255,255,255,0.75)',
+              color: 'rgba(255,255,255,0.7)',
               maxWidth: '480px',
               lineHeight: 1.65,
             }}
@@ -117,27 +117,42 @@ export default function Kit() {
             >
               <div
                 style={{
-                  background: 'rgba(255,255,255,0.1)',
-                  border: '1px solid rgba(255,255,255,0.2)',
+                  position: 'relative',
+                  background: '#221F17',
+                  border: '1px solid rgba(255,255,255,0.1)',
                   borderRadius: '10px',
                   overflow: 'hidden',
                   height: '100%',
                   boxSizing: 'border-box',
                   display: 'flex',
                   flexDirection: 'column',
-                  backdropFilter: 'blur(8px)',
-                  transition: 'background 0.22s ease, transform 0.22s ease',
+                  transition: 'transform 0.22s ease, border-color 0.22s ease',
                   cursor: 'default',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.18)'
+                  e.currentTarget.style.borderColor = 'rgba(255,199,44,0.4)'
                   e.currentTarget.style.transform = 'translateY(-4px)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.1)'
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
                   e.currentTarget.style.transform = 'translateY(0)'
                 }}
               >
+                {/* Grommet hole — reads as a hang-tag */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '12px',
+                    left: '12px',
+                    width: '14px',
+                    height: '14px',
+                    borderRadius: '50%',
+                    background: '#15130D',
+                    border: '2px solid rgba(255,255,255,0.3)',
+                    zIndex: 2,
+                  }}
+                />
+
                 {/* Photo or icon area */}
                 {item.image ? (
                   <div
@@ -145,7 +160,7 @@ export default function Kit() {
                       height: '200px',
                       flexShrink: 0,
                       overflow: 'hidden',
-                      background: 'rgba(255,255,255,0.08)',
+                      background: 'rgba(255,255,255,0.05)',
                     }}
                   >
                     <img
@@ -171,8 +186,8 @@ export default function Kit() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      background: 'rgba(255,255,255,0.08)',
-                      color: 'rgba(255,255,255,0.6)',
+                      background: 'rgba(255,255,255,0.05)',
+                      color: '#FFC72C',
                     }}
                   >
                     {item.icon}
@@ -198,7 +213,7 @@ export default function Kit() {
                     style={{
                       fontFamily: 'var(--font-body)',
                       fontSize: '0.88rem',
-                      color: 'rgba(255,255,255,0.75)',
+                      color: 'rgba(255,255,255,0.65)',
                       lineHeight: 1.6,
                       margin: 0,
                     }}
@@ -216,7 +231,7 @@ export default function Kit() {
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: '0.82rem',
-            color: 'rgba(255,255,255,0.5)',
+            color: 'rgba(255,255,255,0.45)',
             marginTop: '2rem',
             display: 'flex',
             alignItems: 'center',
@@ -225,7 +240,7 @@ export default function Kit() {
           className="reveal"
         >
           <InfoIcon />
-          O kit é entregue no credenciamento, no dia do evento. Retire entre 6h e 7h na Praça de Fátima.
+          O kit é entregue no credenciamento, no dia do evento. Retire entre 6h e 7h na Linha Vermelha.
         </p>
       </div>
     </section>

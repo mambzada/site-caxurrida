@@ -1,4 +1,5 @@
 import RunnerDogSVG from './icons/RunnerDogSVG'
+import PawStamp from './icons/PawStamp'
 
 export default function Hero() {
   return (
@@ -7,59 +8,17 @@ export default function Hero() {
       style={{
         position: 'relative',
         minHeight: '100svh',
-        background: '#141414',
+        background: '#15130D',
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
       }}
     >
-      {/* Stripe texture overlay */}
+      {/* Subtle diagonal texture */}
       <div
         className="stripe-bg"
         style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}
-      />
-
-      {/* Orange diagonal color block */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: '42%',
-          height: '100%',
-          background: '#E0592A',
-          clipPath: 'polygon(18% 0, 100% 0, 100% 100%, 0% 100%)',
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* Green accent stripe */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          right: '42%',
-          width: '6px',
-          height: '100%',
-          background: '#8CB63C',
-          transform: 'skewX(-8deg)',
-          pointerEvents: 'none',
-        }}
-      />
-
-      {/* Paw prints pattern on orange block */}
-      <div
-        className="paw-bg"
-        style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: '42%',
-          height: '100%',
-          clipPath: 'polygon(18% 0, 100% 0, 100% 100%, 0% 100%)',
-          pointerEvents: 'none',
-        }}
       />
 
       {/* Main content */}
@@ -69,7 +28,7 @@ export default function Hero() {
           zIndex: 2,
           maxWidth: '1280px',
           margin: '0 auto',
-          padding: '7rem 1.5rem 4rem',
+          padding: '7rem 1.5rem 5rem',
           width: '100%',
           boxSizing: 'border-box',
           display: 'grid',
@@ -86,22 +45,22 @@ export default function Hero() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              background: 'rgba(224,89,42,0.18)',
-              border: '1px solid rgba(224,89,42,0.4)',
+              background: 'rgba(255,199,44,0.14)',
+              border: '1px solid rgba(255,199,44,0.4)',
               borderRadius: '3px',
               padding: '0.3rem 0.85rem',
               marginBottom: '1.5rem',
             }}
           >
-            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#E0592A', display: 'inline-block' }} />
+            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#FFC72C', display: 'inline-block' }} />
             <span
               style={{
-                fontFamily: 'var(--font-heading)',
+                fontFamily: 'var(--font-mono)',
                 fontWeight: 700,
                 fontSize: '0.7rem',
-                letterSpacing: '0.2em',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: '#E0592A',
+                color: '#FFC72C',
               }}
             >
               1ª Edição · 16 de Agosto de 2026
@@ -111,24 +70,37 @@ export default function Hero() {
           {/* Main headline */}
           <h1
             style={{
+              position: 'relative',
               fontFamily: 'var(--font-heading)',
               fontWeight: 900,
-              lineHeight: 0.9,
+              lineHeight: 0.88,
               margin: '0 0 1.25rem',
               textTransform: 'uppercase',
             }}
           >
             <span
               style={{
+                position: 'relative',
                 display: 'block',
                 fontSize: 'clamp(4.5rem, 13vw, 10rem)',
                 color: '#ffffff',
-                letterSpacing: '-0.02em',
+                letterSpacing: '-0.01em',
               }}
             >
-              Cach
-              <span style={{ color: '#E0592A' }}>urri</span>
-              da
+              Cachurrida
+              <PawStamp
+                size={64}
+                rotation={-14}
+                delay="0.65s"
+                style={{
+                  position: 'absolute',
+                  top: '-0.3em',
+                  right: '-0.1em',
+                  width: 'clamp(2.4rem, 6vw, 4rem)',
+                  height: 'auto',
+                  filter: 'drop-shadow(0 6px 10px rgba(0,0,0,0.5))',
+                }}
+              />
             </span>
             <span
               style={{
@@ -136,8 +108,8 @@ export default function Hero() {
                 fontSize: 'clamp(1.1rem, 3.2vw, 2.2rem)',
                 color: 'rgba(255,255,255,0.55)',
                 fontWeight: 700,
-                letterSpacing: '0.08em',
-                marginTop: '0.25rem',
+                letterSpacing: '0.04em',
+                marginTop: '0.3rem',
               }}
             >
               de Cachoeiro de Itapemirim
@@ -156,15 +128,14 @@ export default function Hero() {
           >
             <span
               style={{
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 800,
-                fontSize: '1.05rem',
-                letterSpacing: '0.06em',
-                color: '#fff',
-                background: '#E0592A',
+                fontFamily: 'var(--font-mono)',
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                letterSpacing: '0.02em',
+                color: '#15130D',
+                background: '#FFC72C',
                 padding: '0.35rem 0.9rem',
                 borderRadius: '3px',
-                textTransform: 'uppercase',
               }}
             >
               16 AGO 2026
@@ -181,7 +152,7 @@ export default function Hero() {
               }}
             >
               <LocationIcon />
-              Praça de Fátima, Cachoeiro/ES
+              Linha Vermelha, Cachoeiro/ES
             </span>
             <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: '1.1rem' }}>·</span>
             <span
@@ -242,7 +213,7 @@ export default function Hero() {
               letterSpacing: '0.01em',
             }}
           >
-            Inscrições até 10 de agosto de 2026 ou enquanto houver vagas
+            Inscrições até 13 de agosto de 2026 ou enquanto houver vagas
           </p>
         </div>
 
@@ -256,7 +227,7 @@ export default function Hero() {
           className="show-md"
         >
           <RunnerDogSVG
-            style={{ width: '100%', maxWidth: '480px', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.4))' }}
+            style={{ width: '100%', maxWidth: '480px', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.5))' }}
             className="animate-fade-in-up"
           />
         </div>
@@ -275,6 +246,7 @@ export default function Hero() {
           gap: '0.4rem',
           opacity: 0.4,
           animation: 'fadeInUp 1s ease 1.2s backwards',
+          zIndex: 2,
         }}
       >
         <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.65rem', color: '#fff', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
@@ -286,11 +258,14 @@ export default function Hero() {
             top: 0,
             left: 0,
             width: '100%',
-            background: '#E0592A',
+            background: '#FFC72C',
             animation: 'scrollDot 1.6s ease-in-out infinite',
           }} />
         </div>
       </div>
+
+      {/* Hazard-tape strip — ground level of the start corral */}
+      <div className="hazard-tape" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '10px', zIndex: 2 }} />
 
       <style>{`
         @keyframes scrollDot {

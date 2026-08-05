@@ -9,7 +9,7 @@ export default function Contato() {
         background: '#fff',
         paddingTop: '5rem',
         paddingBottom: '5rem',
-        borderTop: '1px solid #e8d8c8',
+        borderTop: '1px solid rgba(21,19,13,0.1)',
       }}
     >
       <div
@@ -21,7 +21,7 @@ export default function Contato() {
         }}
         className="reveal"
       >
-        <span className="section-label">Fale com a organização</span>
+        <span className="section-label" style={{ justifyContent: 'center' }}>Fale com a organização</span>
         <h2
           style={{
             fontFamily: 'var(--font-heading)',
@@ -29,18 +29,18 @@ export default function Contato() {
             fontSize: 'clamp(2rem, 5vw, 3rem)',
             lineHeight: 0.95,
             textTransform: 'uppercase',
-            color: '#1A1A1A',
+            color: '#15130D',
             margin: '0 0 1.5rem',
             letterSpacing: '-0.01em',
           }}
         >
-          Dúvidas? <span style={{ color: '#E0592A' }}>Fale com a gente</span>
+          Dúvidas? <span className="hl">Fale com a gente</span>
         </h2>
         <p
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: '1rem',
-            color: '#6b6b6b',
+            color: '#6B6862',
             lineHeight: 1.65,
             marginBottom: '2.5rem',
           }}
@@ -57,7 +57,7 @@ export default function Contato() {
             justifyContent: 'center',
           }}
         >
-          {/* WhatsApp */}
+          {/* WhatsApp — kept in its real brand green: a recognized functional affordance, used only here */}
           <a
             href={`https://wa.me/${phoneClean}?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Cachurrida%20de%20Cachoeiro.`}
             target="_blank"
@@ -99,8 +99,8 @@ export default function Contato() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.75rem',
-              background: '#FAF6EE',
-              color: '#1A1A1A',
+              background: '#F7F5EC',
+              color: '#15130D',
               fontFamily: 'var(--font-heading)',
               fontWeight: 800,
               fontSize: '1.1rem',
@@ -109,17 +109,17 @@ export default function Contato() {
               padding: '0.9rem 1.75rem',
               borderRadius: '4px',
               textDecoration: 'none',
-              border: '1.5px solid #e8d8c8',
-              boxShadow: '0 4px 0 #e0d0b8',
+              border: '1.5px solid rgba(21,19,13,0.15)',
+              boxShadow: '0 4px 0 rgba(21,19,13,0.15)',
               transition: 'transform 0.15s, box-shadow 0.15s',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)'
-              e.currentTarget.style.boxShadow = '0 6px 0 #d0c0a8, 0 8px 20px rgba(0,0,0,0.08)'
+              e.currentTarget.style.boxShadow = '0 6px 0 rgba(21,19,13,0.2), 0 8px 20px rgba(0,0,0,0.08)'
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 4px 0 #e0d0b8'
+              e.currentTarget.style.boxShadow = '0 4px 0 rgba(21,19,13,0.15)'
             }}
           >
             <PhoneIcon />
@@ -131,7 +131,7 @@ export default function Contato() {
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: '0.78rem',
-            color: '#b0a090',
+            color: '#8a877f',
             marginTop: '1.5rem',
           }}
         >

@@ -24,7 +24,7 @@ const APOIADORES = [
     role: 'Apoio Esportivo',
     logo: null,
     abbr: 'EDIPO\nRUNNING',
-    color: '#8CB63C',
+    color: '#15130D',
     width: 140,
   },
 ]
@@ -34,10 +34,10 @@ export default function Apoio() {
     <section
       id="apoio"
       style={{
-        background: '#FAF6EE',
+        background: '#F7F5EC',
         paddingTop: '5rem',
         paddingBottom: '5rem',
-        borderTop: '1px solid #e8d8c8',
+        borderTop: '1px solid rgba(21,19,13,0.1)',
       }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.5rem' }}>
@@ -50,7 +50,7 @@ export default function Apoio() {
               fontSize: '0.68rem',
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: '#b0a090',
+              color: '#6B6862',
               marginBottom: '1.75rem',
             }}
           >
@@ -67,7 +67,7 @@ export default function Apoio() {
         <div
           style={{
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, #e0d0b8 20%, #e0d0b8 80%, transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(21,19,13,0.14) 20%, rgba(21,19,13,0.14) 80%, transparent)',
             marginBottom: '3.5rem',
           }}
           className="reveal"
@@ -82,7 +82,7 @@ export default function Apoio() {
               fontSize: '0.68rem',
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: '#b0a090',
+              color: '#6B6862',
               marginBottom: '1.75rem',
             }}
           >
@@ -115,30 +115,19 @@ export default function Apoio() {
           }}
           className="reveal"
         >
-          <div style={{ width: '36px', height: '1px', background: '#d0c0a8' }} />
+          <div style={{ width: '36px', height: '1px', background: 'rgba(21,19,13,0.2)' }} />
           <p
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '0.82rem',
-              color: '#9a8a7a',
+              color: '#6B6862',
               maxWidth: '440px',
               lineHeight: 1.6,
             }}
           >
             Quer apoiar a Cachurrida e contribuir com a causa animal? Entre em contato conosco.
           </p>
-          <a
-            href="#contato"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.88rem',
-              fontWeight: 600,
-              color: '#E0592A',
-              textDecoration: 'none',
-              borderBottom: '1px solid rgba(224,89,42,0.35)',
-              paddingBottom: '1px',
-            }}
-          >
+          <a href="#contato" className="link-underline" style={{ fontSize: '0.88rem' }}>
             Fale com a organização
           </a>
         </div>
@@ -171,7 +160,7 @@ function LogoCard({ org, size }) {
           height: `${boxH}px`,
           borderRadius: '8px',
           background: '#fff',
-          border: '1px solid #e8dece',
+          border: '1px solid rgba(21,19,13,0.12)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -226,7 +215,7 @@ function LogoCard({ org, size }) {
         style={{
           fontFamily: 'var(--font-body)',
           fontSize: '0.72rem',
-          color: '#b0a090',
+          color: '#6B6862',
           letterSpacing: '0.05em',
         }}
       >

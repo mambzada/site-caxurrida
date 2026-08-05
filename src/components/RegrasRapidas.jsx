@@ -51,7 +51,7 @@ export default function RegrasRapidas() {
                 fontSize: 'clamp(2.2rem, 5vw, 3.2rem)',
                 lineHeight: 0.95,
                 textTransform: 'uppercase',
-                color: '#1A1A1A',
+                color: '#15130D',
                 margin: '0',
                 letterSpacing: '-0.01em',
               }}
@@ -64,32 +64,14 @@ export default function RegrasRapidas() {
               style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: '1rem',
-                color: '#6b6b6b',
+                color: '#6B6862',
                 lineHeight: 1.65,
                 margin: 0,
               }}
             >
               A Cachurrida é um evento seguro, inclusivo e divertido. Leia as regras principais e, para mais detalhes, consulte o regulamento completo.
             </p>
-            <a
-              href="#regulamento"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.35rem',
-                marginTop: '1rem',
-                color: '#E0592A',
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                borderBottom: '1px solid rgba(224,89,42,0.35)',
-                paddingBottom: '1px',
-                transition: 'border-color 0.15s',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#E0592A')}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(224,89,42,0.35)')}
-            >
+            <a href="#regulamento" className="link-underline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', marginTop: '1rem', fontFamily: 'var(--font-body)', fontSize: '0.9rem' }}>
               Ver regulamento completo
               <ArrowRightIcon />
             </a>
@@ -112,7 +94,7 @@ export default function RegrasRapidas() {
             >
               <div
                 style={{
-                  border: '1px solid #ebe0ce',
+                  border: '1px solid rgba(21,19,13,0.12)',
                   borderRadius: '10px',
                   padding: '1.5rem',
                   height: '100%',
@@ -124,11 +106,11 @@ export default function RegrasRapidas() {
                   cursor: 'default',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = '#E0592A'
+                  e.currentTarget.style.borderColor = '#15130D'
                   e.currentTarget.style.transform = 'translateY(-3px)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#ebe0ce'
+                  e.currentTarget.style.borderColor = 'rgba(21,19,13,0.12)'
                   e.currentTarget.style.transform = 'translateY(0)'
                 }}
               >
@@ -137,12 +119,11 @@ export default function RegrasRapidas() {
                     width: '42px',
                     height: '42px',
                     borderRadius: '8px',
-                    background: '#FAF6EE',
-                    border: '1px solid #ebe0ce',
+                    background: 'rgba(255,199,44,0.2)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#E0592A',
+                    color: '#15130D',
                     flexShrink: 0,
                   }}
                 >
@@ -153,7 +134,7 @@ export default function RegrasRapidas() {
                     fontFamily: 'var(--font-heading)',
                     fontWeight: 800,
                     fontSize: '1.05rem',
-                    color: '#1A1A1A',
+                    color: '#15130D',
                     margin: 0,
                     textTransform: 'uppercase',
                     letterSpacing: '0.02em',
@@ -165,7 +146,7 @@ export default function RegrasRapidas() {
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.88rem',
-                    color: '#5a5a5a',
+                    color: '#5a5750',
                     lineHeight: 1.6,
                     margin: 0,
                   }}
